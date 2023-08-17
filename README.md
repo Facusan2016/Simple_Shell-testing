@@ -23,6 +23,12 @@ After running `make testing` or `make valgrind`, several directories will be cre
   - `hsh_out`: In this directory, you can find the output of the hsh program.
   - `sh_out`: In this directory, you can find the output of the sh (Bourne Shell) program.
 
+## Errors
+When attempting to test by passing a non-existent executable name, the output of each program will differ as they print different errors.
+The correct way to print errors, following the original problem statement, is to display the same output as in bash, with the only change being the program name replaced by argv[0].
+
+Another error is that sometimes Valgrind tests fail and show memory leaks, even though when they are run using cat "file" | ./hsh, there are no memory leaks.
+
 ## Author
 This project was created by Facundo Sánchez.
 
